@@ -23,6 +23,10 @@
             {
                 "file": "docker-compose.yml",
                 "target": "/opt/sandbox"
+            },
+            {
+                "file": "client/*",
+                "target": "/opt/sandbox/client/"
             }
         ]
       }
@@ -30,10 +34,13 @@
   "environment": {
     "hidefinish": true,
     "uilayout": "editor-terminal",
-    "uieditorpath": "/opt/sandbox/iroha"
+    "uieditorpath": "/opt/sandbox/client"
   },
   "backend": {
     "imageid": "ubuntu"
   },
-  "files": ["/opt/sandbox/iroha/client.py"]
+  "files": [
+      "/opt/sandbox/client/client.py",
+      "/opt/sandbox/client/add-asset-quantity.py"
+    ]
 }
