@@ -1,0 +1,25 @@
+{
+  "noindex": true,
+  "title": "Run Commands Automatically",
+  "description": "Automatically run commands in the foreground and background when a scenario starts",
+  "details": {
+      "steps": [
+          {
+              "title": "Step 1",
+              "text": "step1.md"
+          }
+      ],
+      "intro": {
+          "text": "intro.md",
+          "code": "foreground.sh",
+          "credits": ""
+      }
+  },
+  "environment": {
+      "hidefinish": true,
+      "uilayout": "terminal"
+  },
+  "backend": {
+      "imageid": "ubuntu"
+  }
+}

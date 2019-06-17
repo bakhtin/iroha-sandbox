@@ -1,0 +1,1 @@
+Commands can be run automatically in the foreground and background when a scenario starts and when a step loads.
