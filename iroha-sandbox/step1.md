@@ -1,4 +1,4 @@
-<pre class="file" data-filename="/sandbox/client.py" data-target="replace">
+<pre class="file" data-filename="/opt/sandbox/client/client.py" data-target="replace">
 import iroha, binascii
 from iroha import Iroha, IrohaGrpc, IrohaCrypto
 from iroha.primitive_pb2 import *
@@ -29,7 +29,7 @@ def send_transaction_and_print_status(transaction):
     print(status)
 </pre>
 
-<pre class="file" data-filename="/sandbox/add-asset-quantity.py" data-target="replace">
+<pre class="file" data-filename="/opt/sandbox/client/add-asset-quantity.py" data-target="replace">
 import client
 
 @client.trace
