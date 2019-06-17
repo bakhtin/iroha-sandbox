@@ -1,25 +1,46 @@
 {
   "noindex": true,
-  "title": "Run Commands Automatically",
-  "description": "Automatically run commands in the foreground and background when a scenario starts",
+  "title": "Hyperledger Iroha Sandbox",
+  "description": "Play with Hyperledger Iroha blockhain solution using Python library",
   "details": {
       "steps": [
           {
-              "title": "Step 1",
-              "code": "foreground.sh",
-              "text": "step1.md"
+            "title": "Step 1",
+            "courseData": "step1-background.sh",
+            "text": "step1.md"
           }
       ],
       "intro": {
-          "text": "intro.md",
-          "credits": ""
+        "text": "intro.md",
+        "credits": ""
       }
   },
   "environment": {
-      "hidefinish": true,
-      "uilayout": "terminal"
+    "hidefinish": true,
+    "uilayout": "editor-terminal"
   },
   "backend": {
-      "imageid": "ubuntu"
-  }
+    "imageid": "ubuntu"
+  },
+  "assets": {
+    "client": [
+        {
+            "file": "client/client.py",
+            "target": "/opt/sandbox/client.py"
+        },
+        {
+            "file": "client/add-asset-quantity.py",
+            "target": "/opt/sandbox/add-asset-quantity.py"
+        }
+    ],
+    "host01": [
+        {
+            "file": "iroha-config/config.docker",
+            "target": "/opt/sandbox/config.docker"
+        }
+    ]
+  },
+  "files": [
+    "/opt/sandbox/client.py", "/opt/sandbox/add-asset-quantity.py"
+  ]
 }

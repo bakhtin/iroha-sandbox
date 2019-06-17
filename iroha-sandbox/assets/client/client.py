@@ -1,4 +1,3 @@
-<pre class="file" data-filename="/sandbox/client.py" data-target="replace">
 import iroha, binascii
 from iroha import Iroha, IrohaGrpc, IrohaCrypto
 from iroha.primitive_pb2 import *
@@ -27,19 +26,3 @@ def send_transaction_and_print_status(transaction):
   net.send_tx(transaction)
   for status in net.tx_status_stream(transaction):
     print(status)
-</pre>
-
-<pre class="file" data-filename="/sandbox/add-asset-quantity.py" data-target="replace">
-import client
-
-@client.trace
-def send():  
-  commands = [    
-    client.iroha.command('AddAssetQuantity', asset_id='coin#test', amount='50000.00')
-  ]
-  tx = client.iroha.transaction(commands, quorum=1)
-  client.IrohaCrypto.sign_transaction(tx, client.alice_private_key)
-  client.send_transaction_and_print_status(tx)
-
-send()
-</pre>
