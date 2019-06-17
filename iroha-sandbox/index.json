@@ -15,16 +15,6 @@
         "credits": ""
       },
       "assets": {
-        "client": [
-            {
-                "file": "client/client.py",
-                "target": "/home/scrapbook/"
-            },
-            {
-                "file": "client/add-asset-quantity.py",
-                "target": "/home/scrapbook/"
-            }
-        ],
         "host01": [
             {
                 "file": "iroha-config/*",
@@ -40,10 +30,10 @@
   "environment": {
     "hidefinish": true,
     "uilayout": "editor-terminal",
-    "uieditorpath": "/home/scrapbook"
+    "uieditorpath": "/opt/sandbox/iroha"
   },
   "backend": {
     "imageid": "ubuntu"
   },
-  "files": ["/home/scrapbook/client.py"]
+  "files": ["/opt/sandbox/iroha/client.py"]
 }
