@@ -25,22 +25,23 @@
                 "target": "/opt/sandbox"
             },
             {
-                "file": "client/*",
-                "target": "/opt/sandbox/client/"
+                "file": "client/__init__.py",
+                "target": "/opt/sandbox/iroha-config"
             }
         ]
       }
   },
+  "files": [
+    "client.py",
+    "add-asset-quantity.py"
+  ],
   "environment": {
     "hidefinish": true,
     "uilayout": "editor-terminal",
-    "uieditorpath": "/opt/sandbox/client"
+    "uisettings": "python",
+    "uieditorpath": "./client"
   },
   "backend": {
     "imageid": "ubuntu"
-  },
-  "files": [
-      "/opt/sandbox/client/client.py",
-      "/opt/sandbox/client/add-asset-quantity.py"
-    ]
+  }
 }
