@@ -1,3 +1,2 @@
 #!/bin/bash
-adduser test2
-su - test2
+sleep 5; /tmp/wait.sh
