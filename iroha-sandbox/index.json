@@ -6,13 +6,21 @@
       "steps": [
           {
             "title": "Step 1",
-            "courseData": "step1-background.sh",
             "code": "step1-foreground.sh",
             "text": "step1.md"
+          },
+          {
+            "title": "Step 2",
+            "text": "step2.md"
+          },
+          {
+            "title": "Step 3",
+            "text": "step3.md"
           }
       ],
       "intro": {
         "text": "intro.md",
+        "courseData": "intro-background.sh",
         "credits": ""
       },
       "assets": {

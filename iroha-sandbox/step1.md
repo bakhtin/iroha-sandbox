@@ -1,4 +1,6 @@
 <pre class="file" data-filename="client.py" data-target="replace">
+#!/usr/bin/env python3.7
+
 import iroha, binascii
 from iroha import Iroha, IrohaGrpc, IrohaCrypto
 from iroha.primitive_pb2 import *
@@ -30,6 +32,8 @@ def send_transaction_and_print_status(transaction):
 </pre>
 
 <pre class="file" data-filename="add-asset-quantity.py" data-target="replace">
+#!/usr/bin/env python3.7
+
 import client
 
 @client.trace
@@ -43,3 +47,5 @@ def send():
 
 send()
 </pre>
+
+`python3.7 add-asset-quantity.py`{{execute}}
