@@ -1,3 +1,7 @@
+`touch transfer-assets.py`{{execute}}
+
+`transfer-assets.py`{{open}}
+
 <pre class="file" data-filename="transfer-assets.py" data-target="replace">
 #!/usr/bin/env python3.7
 

@@ -4,6 +4,10 @@
   "description": "Play with Hyperledger Iroha blockhain solution using Python library",
   "details": {
       "steps": [
+        {
+          "title": "Step 0",
+          "text": "step0.md"
+        },
           {
             "title": "Step 1",
             "code": "step1-foreground.sh",

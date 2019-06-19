@@ -1,2 +1,3 @@
 #!/bin/bash
-sleep 5; /tmp/wait.sh
+sleep 5
+/tmp/wait.sh

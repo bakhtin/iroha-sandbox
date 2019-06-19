@@ -1,3 +1,7 @@
+`touch get-account-assets.py`{{execute}}
+
+`get-account-assets.py`{{open}}
+
 <pre class="file" data-filename="get-account-assets.py" data-target="replace">
 #!/usr/bin/env python3.7
 
