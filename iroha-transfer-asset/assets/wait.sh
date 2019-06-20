@@ -24,4 +24,3 @@ show_progress()
 }
 
 show_progress
-pushd client

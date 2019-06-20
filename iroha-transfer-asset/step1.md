@@ -1,3 +1,5 @@
+The code snippet below creates a connection object, configures private key of user Alice and sets up helper methods to allow tracing of each stage the transaction passes in Iroha. The snippet can be directly copied to a text editor right next to it. It is automatically saved and can be modified if you feel it.
+
 <pre class="file" data-filename="client.py" data-target="replace">
 #!/usr/bin/env python3.7
 
@@ -31,6 +33,11 @@ def send_transaction_and_print_status(transaction):
     print(status)
 </pre>
 
+
+This snippet defines a list of commands that will be wrapped into a transaction and sent to Iroha. We execute `AddAssetQuantity` command that adds up a certain amount to the asset. Full list of commands and queries can be found in [Iroha docs](https://iroha.readthedocs.io/en/latest/api/index.html). 
+
+Alice has a permission called `can_add_asset_qty` that allows to issue an asset quantity (basically, creating money out of the air).
+
 <pre class="file" data-filename="add-asset-quantity.py" data-target="replace">
 #!/usr/bin/env python3.7
 
@@ -48,4 +55,10 @@ def send():
 send()
 </pre>
 
+The script can now be executed:
+
 `python3.7 add-asset-quantity.py`{{execute}}
+
+You should see several statuses returned during the script execution followed by terminal status `COMMITTED`. Transaction is now committed to a block store. It can be verified by looking up its contents:
+
+`docker exec iroha cat /tmp/block_store/0000000000000001 | python3 -m json.tool`{{execute}}

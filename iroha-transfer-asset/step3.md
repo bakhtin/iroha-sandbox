@@ -1,6 +1,14 @@
+We can now verify that Bob has received our transfer by querying his account balance.
+
+Create another file:
+
 `touch get-account-assets.py`{{execute}}
 
+And open it:
+
 `get-account-assets.py`{{open}}
+
+Copy the snippet. It will execute a command that queries Bob's balance. Note that the command is executed on behalf of Alice's account. That is possible since she has `can_get_all_txs` permission.
 
 <pre class="file" data-filename="get-account-assets.py" data-target="replace">
 #!/usr/bin/env python3.7
@@ -19,5 +27,7 @@ def send():
 
 send()
 </pre>
+
+Execute the script and verify that Bob's account balance is `1.00`:
 
 `python3.7 get-account-assets.py`{{execute}}
