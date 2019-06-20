@@ -1,33 +1,31 @@
-We can now verify that Bob has received our transfer by querying his account balance.
+Let's create another file:
 
-Create another file:
-
-`touch get-account-assets.py`{{execute}}
+`touch transfer-assets.py`{{execute}}
 
 And open it:
 
-`get-account-assets.py`{{open}}
+`transfer-assets.py`{{open}}
 
-Copy the snippet. It will execute a command that queries Bob's balance. Note that the command is executed on behalf of Alice's account. That is possible since she has `can_get_all_txs` permission.
+It will contain a command that transfers some asset quantity from user Alice to user Bob:
 
-<pre class="file" data-filename="get-account-assets.py" data-target="replace">
+<pre class="file" data-filename="transfer-assets.py" data-target="replace">
 #!/usr/bin/env python3.7
 
 import client
 
 @client.trace
-def send():
-  query = client.iroha.query('GetAccountAssets', account_id='bob@test')
-  client.IrohaCrypto.sign_query(query, client.alice_private_key)
-  response = client.net.send_query(query)
-  data = response.account_assets_response.account_assets
-  for asset in data:
-    print('Asset id = {}, balance = {}'.format(
-      asset.asset_id, asset.balance))
+def send():  
+  commands = [    
+    client.iroha.command('TransferAsset', src_account_id='alice@test', dest_account_id='bob@test', asset_id='coin#test',
+      amount='1.00')
+  ]
+  tx = client.iroha.transaction(commands, quorum=1)
+  client.IrohaCrypto.sign_transaction(tx, client.alice_private_key)
+  client.send_transaction_and_print_status(tx)
 
 send()
 </pre>
 
-Execute the script and verify that Bob's account balance is `1.00`:
+Execute the script:
 
-`python3.7 get-account-assets.py`{{execute}}
+`python3.7 transfer-assets.py`{{execute}}

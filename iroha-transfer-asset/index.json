@@ -5,21 +5,21 @@
   "details": {
       "steps": [
         {
-          "title": "Step 0",
-          "text": "step0.md"
+          "title": "Step 1",
+          "text": "step1.md"
         },
           {
-            "title": "Step 1",
-            "code": "step1-foreground.sh",
-            "text": "step1.md"
-          },
-          {
             "title": "Step 2",
+            "code": "step2-foreground.sh",
             "text": "step2.md"
           },
           {
             "title": "Step 3",
             "text": "step3.md"
+          },
+          {
+            "title": "Step 4",
+            "text": "step4.md"
           }
       ],
       "intro": {
