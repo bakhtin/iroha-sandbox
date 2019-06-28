@@ -32,33 +32,3 @@ def send_transaction_and_print_status(transaction):
   for status in net.tx_status_stream(transaction):
     print(status)
 </pre>
-
-
-This snippet defines a list of commands that will be wrapped into a transaction and sent to Iroha. We execute `AddAssetQuantity` command that adds up a certain amount to the asset. Full list of commands and queries can be found in [Iroha docs](https://iroha.readthedocs.io/en/latest/api/index.html). 
-
-Alice has a permission called `can_add_asset_qty` that allows to issue an asset quantity (basically, creating money out of the air).
-
-<pre class="file" data-filename="add-asset-quantity.py" data-target="replace">
-#!/usr/bin/env python3.7
-
-import client
-
-@client.trace
-def send():  
-  commands = [    
-    client.iroha.command('AddAssetQuantity', asset_id='coin#test', amount='50000.00')
-  ]
-  tx = client.iroha.transaction(commands, quorum=1)
-  client.IrohaCrypto.sign_transaction(tx, client.alice_private_key)
-  client.send_transaction_and_print_status(tx)
-
-send()
-</pre>
-
-The script can now be executed:
-
-`python3.7 add-asset-quantity.py`{{execute}}
-
-You should see several statuses returned during the script execution followed by terminal status `COMMITTED`. Transaction is now committed to a block store. It can be verified by looking up its contents:
-
-`docker exec iroha cat /tmp/block_store/0000000000000002 | python3 -m json.tool`{{execute}}
