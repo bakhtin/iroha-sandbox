@@ -1,6 +1,6 @@
 This Iroha is pre-configured with two users: `alice@test` and `bob@test`. 
 
-![Alice and Bob](/iroha-sandbox/iroha-transfer-asset/assets/alicebob.png)
+![Alice and Bob](/iroha-sandbox/iroha-transfer-asset/assets/images/alicebob.png)
 
 They both have [all available permissions](https://github.com/hyperledger/iroha/blob/master/shared_model/schema/primitive.proto#L29) in the system. 
 So both of them can perform any of the available actions in the system. 
