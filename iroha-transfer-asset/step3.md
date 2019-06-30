@@ -8,7 +8,7 @@ There you can also find parameters that need to be tranferred along with certain
 
 So, as Alice has all of the permissions, she also has a permission called `can_add_asset_qty` - it allows her to issue coins (basically, creating money out of thin air):
 
-![Coin Issue](/assets/addcoin.png)
+![Coin Issue](/sarag/scenarios/iroha-transfer-asset/assets/addcoin.png)
 
 <pre class="file" data-filename="add-asset-quantity.py" data-target="replace">
 #!/usr/bin/env python3.7
