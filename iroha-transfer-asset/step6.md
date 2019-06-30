@@ -33,6 +33,6 @@ send()
 
 Execute the script and verify that Bob's account balance is `1.00`:
 
-![Query](/assets/images/query.png)
+![Query](https://github.com/LiraLemur/iroha-sandbox/blob/master/iroha-transfer-asset/assets/images/query.png)
 
 `python3.7 get-account-assets.py`{{execute}}

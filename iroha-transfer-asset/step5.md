@@ -9,7 +9,7 @@ And open it:
 
 It contains a command that transfers some asset quantity from Alice to Bob:
 
-![Transfer](/assets/images/transfer.png)
+![Transfer](https://github.com/LiraLemur/iroha-sandbox/blob/master/iroha-transfer-asset/assets/images/transfer.png)
 
 <pre class="file" data-filename="transfer-assets.py" data-target="replace">
 #!/usr/bin/env python3.7
