@@ -7,7 +7,7 @@ So both of them can perform any of the available actions in the system.
 
 There is also an asset -- `coin#test`:
 
-![Coin](../assets/images/coin.png)
+![Coin](/assets/images/coin.png)
 
 Alice, Bob and the asset are parts of the same domain - `test`. 
 There might be other ones in the system, representing different households, companies or institutions.
