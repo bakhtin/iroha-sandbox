@@ -1,4 +1,10 @@
-The code snippet below creates a connection object, configures private key of user Alice and sets up helper methods to allow tracing of each stage the transaction passes in Iroha. The snippet can be directly copied to a text editor right next to it. It is automatically saved and can be modified if you feel it.
+The code snippet below:
+* creates a connection object
+* configures private key of user Alice, so Alice could confirm transactions
+* sets up helper methods to allow tracing of each stage the transaction passes in Iroha - that way you will see the logs of what is going on in the system. 
+
+You can directly copy the snippet into a text editor right next to it or modify it if you feel like it. 
+It is automatically saved.
 
 <pre class="file" data-filename="client.py" data-target="replace">
 #!/usr/bin/env python3.7

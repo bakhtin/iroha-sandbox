@@ -1,4 +1,5 @@
-Let's create another file:
+Let's create another file. 
+Now for transferring the assets that were created during the previous transaction:
 
 `touch transfer-assets.py`{{execute}}
 
@@ -6,7 +7,9 @@ And open it:
 
 `transfer-assets.py`{{open}}
 
-It will contain a command that transfers some asset quantity from user Alice to user Bob:
+It contains a command that transfers some asset quantity from Alice to Bob:
+
+![Transfer](../assets/images/transfer.png)
 
 <pre class="file" data-filename="transfer-assets.py" data-target="replace">
 #!/usr/bin/env python3.7
@@ -26,6 +29,6 @@ def send():
 send()
 </pre>
 
-Execute the script:
+Now, when the command is ready, let us execute the script:
 
 `python3.7 transfer-assets.py`{{execute}}
