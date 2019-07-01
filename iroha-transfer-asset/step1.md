@@ -1,13 +1,13 @@
 This Iroha is pre-configured with two users: `alice@test` and `bob@test`. 
 
-![Alice and Bob](/sarag/scenarios/iroha-transfer-asset/assets/alicebob.png)
+![Alice and Bob](assets/alicebob.png)
 
 They both have [all available permissions](https://github.com/hyperledger/iroha/blob/master/shared_model/schema/primitive.proto#L29) in the system. 
 So both of them can perform any of the available actions in the system. 
 
 There is also an asset -- `coin#test`:
 
-![Coin](/sarag/scenarios/iroha-transfer-asset/assets/coin.png)
+![Coin](assets/coin.png)
 
 Alice, Bob and the asset are parts of the same domain - `test`. 
 There might be other ones in the system, representing different households, companies or institutions.

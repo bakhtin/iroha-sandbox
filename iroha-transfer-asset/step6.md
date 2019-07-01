@@ -33,6 +33,6 @@ send()
 
 Execute the script and verify that Bob's account balance is `1.00`:
 
-![Query](/sarag/scenarios/iroha-transfer-asset/assets/query.png)
+![Query](assets/query.png)
 
 `python3.7 get-account-assets.py`{{execute}}

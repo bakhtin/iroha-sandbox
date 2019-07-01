@@ -9,7 +9,7 @@ And open it:
 
 It contains a command that transfers some asset quantity from Alice to Bob:
 
-![Transfer](/sarag/scenarios/iroha-transfer-asset/assets/transfer.png)
+![Transfer](assets/transfer.png)
 
 <pre class="file" data-filename="transfer-assets.py" data-target="replace">
 #!/usr/bin/env python3.7
