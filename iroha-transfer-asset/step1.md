@@ -8,3 +8,5 @@ Check that Iroha is up and running:
 We run a [dockerized version of Iroha](https://hub.docker.com/r/hyperledger/iroha/). The container should show up as `UP` in the command output.
 
 All set. We can proceed with the actual interaction with Iroha API
+
+![Coin Issue](assets/1.jpg)
