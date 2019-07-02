@@ -12,7 +12,7 @@ There is also an asset -- `coin#test`:
 Alice, Bob and the asset are parts of the same domain - `test`. 
 There might be other ones in the system, representing different households, companies or institutions.
 
-There is a [Python Iroha library](https://github.com/hyperledger/iroha-python/) installed in the system, so commands written within .py file could be processed.
+There is a [Python Iroha library](https://github.com/hyperledger/iroha-python/) installed in the system, so we can interact with Iroha from within a Python code
 
 Check that Iroha is up and running:
 `docker-compose -f /opt/sandbox/docker-compose.yml ps`{{execute}}
