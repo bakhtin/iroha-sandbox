@@ -1,5 +1,5 @@
 **That way, during this scenario we have:**
-	* created key for Alice's account
+	* configured which key would be used in Alice's account
 	* issued coins
 	* sent them to Bob's account
 	* made sure they reached it

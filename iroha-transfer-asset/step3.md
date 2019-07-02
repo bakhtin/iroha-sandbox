@@ -1,4 +1,4 @@
-Now as Alice has her account and a private key, she can send commands to the system. 
+Now as we configured the library to use this particular key of Alice (which was pre-configured together with the account in the genesis block), she can send commands to the system. 
 
 This next snippet defines a list of commands that will be wrapped into a transaction and sent to Iroha. 
 With `AddAssetQuantity` command Alice will issue a certain amount of the asset `coin#test`. 

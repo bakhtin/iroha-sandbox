@@ -1,4 +1,4 @@
-This is a Linux-based sandbox that runs Hyperledger Iroha v1.0. 
+This is a Linux-based sandbox that runs single-node Hyperledger Iroha v1.0. 
 With this sandbox you can interact with Iroha API following specfic scenarios via Python library.
 
 **Who will enjoy it:** developers who intend to create blockchain applications on Hyperledger Iroha
