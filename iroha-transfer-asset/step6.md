@@ -4,7 +4,7 @@ As usual, by creating another file:
 
 `touch get-account-assets.py`{{execute}}
 
-And open it:
+And opening it:
 
 `get-account-assets.py`{{open}}
 

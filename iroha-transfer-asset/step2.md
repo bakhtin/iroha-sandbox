@@ -1,6 +1,6 @@
 The code snippet below:
 * creates a connection object
-* configures private key of user Alice, so Alice could confirm transactions
+* configures private key of user Alice, so Alice could sign transactions
 * sets up helper methods to allow tracing of each stage the transaction passes in Iroha - that way you will see the logs of what is going on in the system. 
 
 You can directly copy the snippet into a text editor right next to it or modify it if you feel like it. 

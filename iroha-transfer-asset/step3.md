@@ -4,7 +4,7 @@ This next snippet defines a list of commands that will be wrapped into a transac
 With `AddAssetQuantity` command Alice will issue a certain amount of the asset `coin#test`. 
 
 You can wrap other commands into transactions - full list of commands and queries can be found in [Iroha docs](https://iroha.readthedocs.io/en/latest/api/index.html). 
-There you can also find parameters that need to be tranferred along with certain commands.
+There you can also find parameters that need to be transferred along with certain commands.
 
 So, as Alice has all of the permissions, she also has a permission called `can_add_asset_qty` - it allows her to issue coins (basically, creating money out of thin air):
 
