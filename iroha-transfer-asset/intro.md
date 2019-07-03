@@ -1,8 +1,10 @@
-This is a Linux-based sandbox that runs an instance of Hyperledger Iroha v1.0 and demonstrates how users can interact with it's API using Python library.
+This is a Linux-based sandbox that runs single-node Hyperledger Iroha v1.0. 
+With this sandbox you can interact with Iroha API following specfic scenarios via Python library.
 
-**Target audience:** developers who intend to create applications on Hyperledger Iroha
+**Who will enjoy it:** developers who intend to create blockchain applications on Hyperledger Iroha
 
-**Prerequisites:**
-  - basic knowledge of Python programming language
+**You will need:**
+  - very basic knowledge of Python
+  - nothing else ;)
 
-The guide covers the scenario of user Alice who adds quantity to asset `coin` in domain `test`, transfers a fraction of it to user Bob and queries Bob's account balance.
+In this scenario user Alice will issue some `coin` asset in domain `test` and then transfer some amount of it to another user - Bob.

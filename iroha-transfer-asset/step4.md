@@ -1,33 +1,10 @@
-We can now verify that Bob has received our transfer by querying his account balance.
+Now our script is ready and can be executed:
 
-Create another file:
+`python3.7 add-asset-quantity.py`{{execute}}
 
-`touch get-account-assets.py`{{execute}}
+You should see several statuses returned during the script execution followed by terminal status `COMMITTED` - it means that the transaction was accepted by the blockchain and written down to the block store. 
+You can check that by looking up block store's contents:
 
-And open it:
+`docker exec iroha cat /tmp/block_store/0000000000000002 | python3 -m json.tool`{{execute}}
 
-`get-account-assets.py`{{open}}
-
-Copy the snippet. It will execute a command that queries Bob's balance. Note that the command is executed on behalf of Alice's account. That is possible since she has `can_get_all_txs` permission.
-
-<pre class="file" data-filename="get-account-assets.py" data-target="replace">
-#!/usr/bin/env python3.7
-
-import client
-
-@client.trace
-def send():
-  query = client.iroha.query('GetAccountAssets', account_id='bob@test')
-  client.IrohaCrypto.sign_query(query, client.alice_private_key)
-  response = client.net.send_query(query)
-  data = response.account_assets_response.account_assets
-  for asset in data:
-    print('Asset id = {}, balance = {}'.format(
-      asset.asset_id, asset.balance))
-
-send()
-</pre>
-
-Execute the script and verify that Bob's account balance is `1.00`:
-
-`python3.7 get-account-assets.py`{{execute}}
+So now we have 50000 coins!
